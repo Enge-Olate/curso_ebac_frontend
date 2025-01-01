@@ -1,0 +1,100 @@
+/* Reset css */
+*, a{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    text-decoration: none;
+}
+/* End reset css */
+
+/* Container div */
+.container{
+    width: 1024px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+/* End container div */
+
+/* Header*/
+
+body > header{
+    background: rgba(87, 83, 83, 0.3);
+    padding: 16px 0;
+    color: #333;
+    
+}
+
+
+header .container {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+header .container nav a{
+    margin-right: 5px;
+    color: #333;
+    
+}
+
+
+
+/* End header */
+
+/* Main and section */
+
+main .container .articles{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+section h2{
+    margin: 5px 10px;
+    font-size: 32px;
+}
+
+section header h3{
+    font-size: 28px;
+}
+
+.articles article{
+    width: 28%;
+}
+.articles article img{
+    width: 95%;
+}
+article > img, article > header, article > main, article > footer{
+    margin: 5px 10px;
+}
+
+/* End main and section */
+
+/* section sports */
+ 
+
+#esporte a{
+    background:rgba(228, 210, 210, 0.3);
+    color: #3f3b3b   
+}
+/* End sports */
+
+/* section economia */
+#economia a{
+    background:rgba(222, 226, 158, 0.3);
+    color: #303028;
+}
+/* end tecnologia */
+
+/* section tecnologia */
+#tecnologia a{
+    background:rgba(210, 164, 219, 0.3);
+    color:blueviolet;
+    
+}
+/* end tecnologia */
+
+/* section health */
+#saude a{
+    color: #333;
+    background:rgba(183, 189, 188, 0.3);
+    
+}
