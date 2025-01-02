@@ -15,28 +15,31 @@
 }
 /* End container div */
 
-/* Header*/
+/* Header, nav*/
 
 body > header{
-    background: rgba(87, 83, 83, 0.3);
+    background: rgba(183, 189, 188, 100);
     padding: 16px 0;
     color: #333;
-    
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    font-family: sans-serif;
 }
-
-
-header .container {
+header, nav{
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    display: flex;
 }
-header .container nav a{
-    margin-right: 5px;
-    color: #333;
-    
+header > h1{
+    font-size: 38px;
+    margin: 0;
+    padding: 10px;
 }
-
-
+nav > a{
+    margin: 0 10px;
+}
 
 /* End header */
 
