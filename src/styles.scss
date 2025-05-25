@@ -1,9 +1,9 @@
-@use "reset"
+@use "reset";
 
-
+$cor-de-fundo:#fff1d0;
 
 body {
-    background-color: #f5f6fa;
+    background-color:$cor-de-fundo;
 }
 
 li {

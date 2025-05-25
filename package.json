@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass src/main.scss build/main.css --watch"
+    "sass": "sass src/styles.scss build/main.css --watch"
   },
   "devDependencies": {
     "sass": "^1.89.0"
