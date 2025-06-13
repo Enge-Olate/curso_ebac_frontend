@@ -1,12 +1,32 @@
 // Variáveis no Less
 @font_header: Sans;
-
+@color_font_header: #fff;
+@font_size_original: 4rem;
+@quebra_desk: ~"(min-width:1020px)";//scaping;
 // fim variáveis
+
+// Seletor
+@seletor_p: #p;
+
+// fim seletor
 
 body{
     background-color: black;
 
 }
+
+@{seletor_p}{
+    font-size: 1.5rem;
+    color: purple;
+
+}
 header h1{
-    font-family: var(@font_header);
+    font-family: @font_header;
+    color: @color_font_header;
+    font-size: @font_size_original;
+}
+@media @quebra_desk{//@media(min-width:500px)
+    header h1{
+        font-size: 1rem;
+    }    
 }
