@@ -1,0 +1,17 @@
+{
+  "name": "learn_less",
+  "version": "1.0.0",
+  "description": "Diretório para o aprendizado do Less.",
+  "license": "ISC",
+  "author": "@Enge-Olate",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "less": "less-watch-compiler ./src/styles ./build/styles",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "less": "^4.3.0",
+    "less-watch-compiler": "^1.16.3"
+  }
+}
