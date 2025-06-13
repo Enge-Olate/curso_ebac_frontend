@@ -1,9 +1,12 @@
 body {
   background-color: black;
 }
+header {
+  display: block;
+}
 #p {
-  font-size: 1.5rem;
   color: purple;
+  font-size: 6rem;
 }
 header h1 {
   font-family: Sans;
@@ -13,5 +16,17 @@ header h1 {
 @media (min-width:1020px) {
   header h1 {
     font-size: 1rem;
+  }
+  #p {
+    color: white;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 750px) {
+  header {
+    display: inline;
+  }
+  header h1 {
+    color: blue;
   }
 }

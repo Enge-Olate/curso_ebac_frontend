@@ -6,20 +6,36 @@
 // fim variáveis
 
 // Seletor
-@seletor_p: #p;
+#seletor_p(@color, @font-size_seletor:4rem){
+    color: @color;
+    font-size: @font-size_seletor;
+}
 
 // fim seletor
 
+// Maps
+@tamanhos_display:{
+    smartphone: 460px;
+    tablet: 750px;
+    desk:1280px;
+}
+
+
+// fim maps
 body{
     background-color: black;
 
 }
 
-@{seletor_p}{
-    font-size: 1.5rem;
-    color: purple;
-
+header{
+    display: block;
 }
+
+
+#p{
+    #seletor_p(purple, 6rem);
+}
+
 header h1{
     font-family: @font_header;
     color: @color_font_header;
@@ -28,5 +44,19 @@ header h1{
 @media @quebra_desk{//@media(min-width:500px)
     header h1{
         font-size: 1rem;
+    }
+    #p{
+        #seletor_p(white, 1rem);
     }    
+    
+}
+
+@media (min-width: @tamanhos_display[tablet]) {
+    header{
+        display: inline;
+    }
+    header h1{
+        color: blue;
+
+    }
 }
