@@ -1,62 +1,15 @@
-// Variáveis no Less
-@font_header: Sans;
-@color_font_header: #fff;
-@font_size_original: 4rem;
-@quebra_desk: ~"(min-width:1020px)";//scaping;
-// fim variáveis
+@import 'maps.less';
+@import 'variaveis.less';
 
-// Seletor
-#seletor_p(@color, @font-size_seletor:4rem){
-    color: @color;
-    font-size: @font-size_seletor;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-// fim seletor
-
-// Maps
-@tamanhos_display:{
-    smartphone: 460px;
-    tablet: 750px;
-    desk:1280px;
-}
-
-
-// fim maps
 body{
-    background-color: black;
-
+    background-color: @background;
 }
-
-header{
-    display: block;
-}
-
-
-#p{
-    #seletor_p(purple, 6rem);
-}
-
-header h1{
-    font-family: @font_header;
-    color: @color_font_header;
-    font-size: @font_size_original;
-}
-@media @quebra_desk{//@media(min-width:500px)
-    header h1{
-        font-size: 1rem;
-    }
-    #p{
-        #seletor_p(white, 1rem);
-    }    
-    
-}
-
-@media (min-width: @tamanhos_display[tablet]) {
-    header{
-        display: inline;
-    }
-    header h1{
-        color: blue;
-
-    }
+li{
+    list-style: none;
 }
