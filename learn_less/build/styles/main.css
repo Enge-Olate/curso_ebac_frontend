@@ -74,7 +74,7 @@ section .product-button:hover {
     margin-top: 30px;
   }
 }
-@media (max-width: 460px) {
+@media (max-width: 500px) {
   header {
     background-color: greenyellow;
   }
