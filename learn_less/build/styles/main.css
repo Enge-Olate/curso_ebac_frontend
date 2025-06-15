@@ -7,15 +7,16 @@ li {
   text-decoration: none;
 }
 body {
-  background-color: #c3c3c3;
+  background-color: #c7c5c5;
 }
 header {
   background-color: #ffffffff;
   position: sticky;
-  left: 0;
+  top: 0;
   max-width: 80%;
   margin: 10px auto;
   border-radius: 25px;
+  font-size: 2rem;
 }
 header .container {
   display: flex;
@@ -31,12 +32,18 @@ header .menu li a {
   color: #333;
 }
 section {
-  background-color: red;
+  background-color: #eeeefa57 transparent;
   max-width: 80%;
-  margin: 10px auto;
+  margin: 50px auto;
+  border-top: 2px solid brown;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-style: inset;
 }
 section h2 {
   text-align: center;
+  font-size: 3rem;
+  color: white;
 }
 section .products {
   max-width: 60%;
@@ -46,8 +53,49 @@ section .product-item {
   margin: 20px 0;
 }
 section .product-item p {
-  font-size: 1em;
+  font-size: 1.2em;
+}
+section .product-item h4 {
+  font-size: 2rem;
 }
 section .product-button {
   color: #fff;
+}
+section .product-button:hover {
+  cursor: pointer;
+  color: #000;
+}
+@media (max-width: 768px) {
+  header .container .menu li {
+    display: block;
+    margin-right: 20px;
+  }
+  section .product-item {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 460px) {
+  header {
+    background-color: greenyellow;
+  }
+  header .container {
+    display: block;
+    text-align: center;
+  }
+  header .container nav .menu li {
+    display: block;
+  }
+  nav .menu li a {
+    font-size: 1.5rem;
+  }
+  section {
+    border: none;
+    background-color: #ffffff;
+  }
+  section h2 {
+    color: #000;
+  }
+  section .product-button {
+    color: #37bd3f;
+  }
 }
