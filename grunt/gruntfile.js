@@ -13,7 +13,7 @@ module.exports= function (grunt){
                     compress: true,
                 },
                 files:{
-                    'dist/styles/main.css': 'src/styles/main.less'
+                    'dist/styles/main.min.css': 'src/styles/main.less'
                 }
             }
         },
