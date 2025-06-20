@@ -1,4 +1,3 @@
-const { task } = require("grunt");
 
 module.exports= function (grunt){
     grunt.initConfig({
@@ -30,6 +29,11 @@ module.exports= function (grunt){
             }
         },
 
+        uglify:{
+            target:{
+                files:{'dist/scripts/saida.min.js' : 'src/scripts/*js'}
+            }
+        },
 
         watch:{
             less:{
@@ -43,9 +47,10 @@ module.exports= function (grunt){
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.registerTask("minha_tarefa", function(){
         console.log('Trabalhando...');
     });
     grunt.registerTask('default',["minha_tarefa", "watch"]);
-    grunt.registerTask('build',["less:production", "less:development", "htmlmin:dist"]);
+    grunt.registerTask('build',["less:production", "less:development", "uglify"]);
 }
