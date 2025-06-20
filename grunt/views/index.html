@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/styles/main.css">
+    <link rel="stylesheet" href="../dev/styles/main.css">
     <title>Grunt</title>
 </head>
 <body>
@@ -12,8 +12,8 @@
     </header>
     <main>
         <form action="#">
-            <label for="number">Digite número de participantes:</label>
-            <input type="number" name="number" id="number">
+            <label for="number">Número de participantes:</label>
+            <input type="number" max="100" min="1" name="number" id="number">
             <button type="submit">Sorteie</button>
         </form>
         <p class="numero_sorteado"></p>

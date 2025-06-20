@@ -17,30 +17,11 @@ module.exports= function (grunt){
                 }
             }
         },
-        htmlmin:{
-            dist:{
-                options:{
-                    removeComments: true,
-                    collapseWhitespace: true
-                },
-                files:{
-                    'dist/views/index.html':'views/*.html'
-                }
-            }
-        },
-
-        uglify:{
-            target:{
-                files:{'dist/scripts/saida.min.js' : 'src/scripts/*js'}
-            }
-        },
-
         watch:{
             less:{
-                files: 'scr/styles/*.less',
-                task: 'less:development'
+                files:['src/styles/*.less'],
+                tasks:['less:development']
             }
-            
         }
         
     });
@@ -52,5 +33,5 @@ module.exports= function (grunt){
         console.log('Trabalhando...');
     });
     grunt.registerTask('default',["minha_tarefa", "watch"]);
-    grunt.registerTask('build',["less:production", "less:development", "uglify"]);
+    grunt.registerTask('build',["less:production"]);
 }

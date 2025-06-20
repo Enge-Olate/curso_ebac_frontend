@@ -1,3 +1,46 @@
 body {
-  background-color: red;
+  background-color: #ff7fff;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+header h1 {
+  font-size: 3em;
+  font-family: cursive;
+  color: #ffffff;
+}
+main form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  color: rgba(52, 52, 116, 0.808);
+}
+main label {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+main input {
+  background-color: transparent;
+  color: rgba(52, 52, 116, 0.808);
+  margin-bottom: 10px;
+  outline: none;
+  font-size: 2em;
+  padding: 4px;
+  border: none;
+  text-align: center;
+  border-bottom: 2px solid rgba(52, 52, 116, 0.808);
+  max-width: 100px;
+  display: block;
+}
+main button {
+  width: 92px;
+  height: max-content;
+  border-radius: 5px;
+  cursor: pointer;
+  color: rgba(52, 52, 116, 0.808);
+  font-size: 1.5em;
+  padding: 4px;
 }
