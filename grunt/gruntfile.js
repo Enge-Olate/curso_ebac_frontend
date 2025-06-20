@@ -1,3 +1,5 @@
+const { task } = require("grunt");
+
 module.exports= function (grunt){
     grunt.initConfig({
         pkg:grunt.file.readJSON('package.json'),
@@ -16,13 +18,20 @@ module.exports= function (grunt){
                 }
             }
         },
+        watch:{
+            less:{
+                files: 'scr/styles/*.less',
+                task: 'less:development'
+            }
+            
+        }
         
     });
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-replace');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask("minha_tarefa", function(){
-        console.log('Hello, Grunt.');
+        console.log('Trabalhando...');
     });
-    grunt.registerTask('default',["minha_tarefa"]);
-    grunt.registerTask('build',["less:production", "replace:dist"]);
+    grunt.registerTask('default',["minha_tarefa", "watch"]);
+    grunt.registerTask('build',["less:production"]);
 }
