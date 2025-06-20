@@ -25,6 +25,10 @@ module.exports= function (grunt){
                         {
                             match: 'ENDERECO_CSS',
                             replacement: './styles/main.css'   
+                        },
+                        {
+                            match: 'ENDERECO_JS',
+                            replacement: '/scripts/main.js'
                         }
                     ]
                 },
@@ -43,6 +47,10 @@ module.exports= function (grunt){
                         {
                             match: 'ENDERECO_CSS',
                             replacement: './styles/main.min.css'   
+                        },
+                        {
+                            match: 'ENDERECO_JS',
+                            replacement: './scripts/saida.maim.min.js'
                         }
                     ]
                 },
@@ -68,7 +76,14 @@ module.exports= function (grunt){
             }
         },
         clean:['prebuild'],
-        
+
+        uglify:{
+            target:{
+                files:{
+                    'dist/scripts/saida.main.min.js': 'src/scripts/*.js'
+                }
+            }
+        },
         watch:{
             less:{
                 files:['src/styles/*.less'],
@@ -85,11 +100,11 @@ module.exports= function (grunt){
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    // grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-replace');
     grunt.registerTask("minha_tarefa", function(){
         console.log('Trabalhando...');
     });
     grunt.registerTask('default',["minha_tarefa", "watch"]);
-    grunt.registerTask('build',["less:production", 'htmlmin:dist', "replace:dist", "clean"]);
+    grunt.registerTask('build',["less:production", 'htmlmin:dist', "replace:dist", "clean", "uglify"]);
 }
