@@ -18,6 +18,19 @@ module.exports= function (grunt){
                 }
             }
         },
+        htmlmin:{
+            dist:{
+                options:{
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files:{
+                    'dist/views/index.html':'views/*.html'
+                }
+            }
+        },
+
+
         watch:{
             less:{
                 files: 'scr/styles/*.less',
@@ -29,9 +42,10 @@ module.exports= function (grunt){
     });
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.registerTask("minha_tarefa", function(){
         console.log('Trabalhando...');
     });
     grunt.registerTask('default',["minha_tarefa", "watch"]);
-    grunt.registerTask('build',["less:production"]);
+    grunt.registerTask('build',["less:production", "less:development", "htmlmin:dist"]);
 }
