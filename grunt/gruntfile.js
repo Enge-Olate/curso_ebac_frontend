@@ -67,7 +67,8 @@ module.exports= function (grunt){
                 }
             }
         },
-
+        clean:['prebuild'],
+        
         watch:{
             less:{
                 files:['src/styles/*.less'],
@@ -79,11 +80,12 @@ module.exports= function (grunt){
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     // grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-replace');
     grunt.registerTask("minha_tarefa", function(){
         console.log('Trabalhando...');
     });
     grunt.registerTask('default',["minha_tarefa", "watch"]);
-    grunt.registerTask('build',["less:production", 'htmlmin:dist', "replace:dist" ]);
+    grunt.registerTask('build',["less:production", 'htmlmin:dist', "replace:dist", "clean"]);
 }
