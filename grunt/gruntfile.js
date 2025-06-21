@@ -39,5 +39,5 @@ module.exports= function (grunt){
         console.log('Trabalhando...');
     });
     grunt.registerTask('default',["minha_tarefa"]);
-    grunt.registerTask('build',["less:production", "uglify"]);
+    grunt.registerTask('build',["less:production", "less:development", "uglify"]);
 }
