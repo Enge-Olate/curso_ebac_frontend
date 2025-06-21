@@ -28,7 +28,7 @@ module.exports= function (grunt){
                         },
                         {
                             match: 'ENDERECO_JS',
-                            replacement: '/scripts/main.js'
+                            replacement: './scripts/main.js'
                         }
                     ]
                 },
@@ -80,7 +80,10 @@ module.exports= function (grunt){
         uglify:{
             target:{
                 files:{
-                    'dist/scripts/saida.main.min.js': 'src/scripts/*.js'
+
+                    'dist/scripts/saida.main.min.js': 'src/scripts/*.js',
+                    'dev/scripts/main.js':'src/scripts/*js'
+                
                 }
             }
         },

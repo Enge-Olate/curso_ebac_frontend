@@ -44,3 +44,9 @@ main button {
   font-size: 1.5em;
   padding: 4px;
 }
+.resultado p {
+  margin-top: 10px;
+  border: 4px dashed #ffffff;
+  font-size: 1.6em;
+  color: rgba(52, 52, 116, 0.808);
+}
