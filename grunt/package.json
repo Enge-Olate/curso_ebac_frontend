@@ -2,22 +2,18 @@
   "name": "grunt",
   "version": "1.0.0",
   "description": "",
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "main": "gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "grunt": "grunt watch",
-    "build": "grunt build"
+    "build":"grunt build"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
   "devDependencies": {
     "grunt": "^1.6.1",
-    "grunt-contrib-clean": "^2.0.1",
-    "grunt-contrib-htmlmin": "^3.1.0",
     "grunt-contrib-less": "^3.0.0",
-    "grunt-contrib-uglify": "^5.2.2",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-replace": "^2.0.2"
+    "grunt-contrib-uglify": "^5.2.2"
   }
 }
