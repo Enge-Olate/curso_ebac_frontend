@@ -1,0 +1,27 @@
+{
+  
+  "name": "template-project",
+  "version":"1.0.0",
+  "description": "Template para futuros projetos.",
+  "main": "index.js",
+
+   "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.4",
+    "@babel/plugin-transform-runtime": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
+    "@babel/runtime": "^7.28.4",
+    "babel-loader": "^10.0.0",
+    "core-js": "^3.45.1",
+    "html-webpack-plugin": "^5.6.4",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
