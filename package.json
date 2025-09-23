@@ -1,11 +1,9 @@
 {
-  
   "name": "template-project",
-  "version":"1.0.0",
+  "version": "1.0.0",
   "description": "Template para futuros projetos.",
   "main": "index.js",
-
-   "scripts": {
+  "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production"
   },
@@ -20,8 +18,25 @@
     "babel-loader": "^10.0.0",
     "core-js": "^3.45.1",
     "html-webpack-plugin": "^5.6.4",
+    "typescript": "^5.9.2",
     "webpack": "^5.101.3",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enge-Olate/curso_ebac_frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Enge-Olate/curso_ebac_frontend/issues"
+  },
+  "homepage": "https://github.com/Enge-Olate/curso_ebac_frontend#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3"
   }
 }
