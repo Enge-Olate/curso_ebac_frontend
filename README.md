@@ -1,3 +1,2 @@
-# curso_ebac_frontend
-Repositório para o curso da Ebac Full-Stack-Python.
+# curso_ebac_frontendRepositório para o curso da Ebac Full-Stack-Python
 

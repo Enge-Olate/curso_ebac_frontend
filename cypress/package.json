@@ -1,0 +1,17 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "Repositório para aprender sobre o Cypress.",
+  "license": "ISC",
+  "author": "@Enge-Olate",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress": "cypress"
+  },
+  "devDependencies": {
+    "cypress": "^15.6.0",
+    "mochawesome": "^7.1.4"
+  }
+}
